@@ -1,4 +1,11 @@
 {
+  "scripts": {
+    "build": "npx tailwindcss build -i ./src/input.css -o ./dist/output.css",
+    "build:plain": "npx tailwindcss build -i ./src/input.css -o ./dist/output.min.css",
+    "build:plain-minify": "npx tailwindcss build -i ./src/input.css -o ./dist/output.min.css --minify",
+    "build:prefix": "npx tailwindcss build -c ./prefix.tailwind.config.js -i ./src/input.css -o ./dist/output-prefix.css",
+    "build:prefix-minify": "npx tailwindcss build -c ./prefix.tailwind.config.js -i ./src/input.css -o ./dist/output-prefix.min.css --minify"
+  },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
